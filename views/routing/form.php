@@ -24,6 +24,9 @@ if (function_exists('music_list')){
 if (function_exists('timeconditions_timegroups_drawgroupselect')){
 	$optionalelems .= load_view(__DIR__.'/timecond.php', array('time_group_id' => $time_group_id, 'time_mode' => $time_mode,'timezone' => $timezone,'calendar_id' => $calendar_id,'calendar_group_id' => $calendar_group_id));
 }
+if (function_exists('callaccounting_ratedecks_drawgroupselect')){
+	$optionalelems .= load_view(__DIR__.'/callaccounting_ratedeck.php', array('ca_ratedeck_id' => $ca_ratedeck_id));
+}
 $routepriority = core_routing_list();
 $routeseqopts = '';
 //Routing select box
